@@ -5,6 +5,6 @@ export async function getGames() {
   return rows;
 }
 
-export async function insertGameTitle(gametitle) {
-  await pool.query('INSERT INTO gametitles (gametitle) VALUES ($1)', [gametitle]);
+export async function insertGameTitle(title, genre, developer) {
+  await pool.query('INSERT INTO gametitles (title, genre, developer) VALUES ($1, $2, $3)', [title, genre, developer]);
 }

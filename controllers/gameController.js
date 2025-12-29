@@ -1,8 +1,10 @@
 import { getGames, insertGameTitle } from "../db/queries.js";
 
 export async function getAllGames(req, res) {
-  res.render('index', {})
-  
+  res.render('index', {
+    title: 'Game List',
+    games: await getGames()
+  })
 };
 
 
@@ -13,10 +15,12 @@ export const gameCreateGet = (req, res) => {
 };
 
 export async function gameCreatePost(req,res) {
-  const {gametitle} = req.body;
-  console.log(`gametitle: ${gametitle}`);
+  const {title} = req.body;
+  const {genre} = req.body;
+  const {developer} = req.body;
+  console.log(`Game: ${title},${genre}, ${developer}`);
   console.log(`body: ${(Object.values(req.body))}`);
-  await insertGameTitle(gametitle);
-  console.log(`Game ${gametitle} saved`);
+  await insertGameTitle(title, genre, developer);
+  // console.log(`Game ${gametitle} saved`);
   res.redirect('/');
 }
