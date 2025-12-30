@@ -2,6 +2,7 @@ import express from 'express';
 import {join} from 'node:path';
 import { fileURLToPath } from 'node:url';
 import gameRouter from './routes/gameRouter.js';
+import developerRouter from './routes/developerRouter.js';
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const filepath = join(dirname, 'views');
 
@@ -20,4 +21,6 @@ app.listen(port, (err) => {
   console.log(`Express running on port: ${port}`);
 });
 
+
 app.use('/', gameRouter);
+app.use('/developer', developerRouter);

@@ -15,12 +15,12 @@ export const gameCreateGet = (req, res) => {
 };
 
 export async function gameCreatePost(req,res) {
-  const {title} = req.body;
+  const {name} = req.body;
   const {genre} = req.body;
   const {developer} = req.body;
-  console.log(`Game: ${title},${genre}, ${developer}`);
+  console.log(`Game: ${name},${genre}, ${developer}`);
   console.log(`body: ${(Object.values(req.body))}`);
-  await insertGameTitle(title, genre, developer);
+  await insertGameTitle(name, genre, developer);
   // console.log(`Game ${gametitle} saved`);
   res.redirect('/');
 }

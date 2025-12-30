@@ -24,11 +24,14 @@
     <tbody>
       <% games.forEach(game=> { %>
         <tr>
-          <td>Title: <%= game.title %>
+          <td>
+            <%= game.name %>
           </td>
-          <td>Genre: <%= game.genre %>
+          <td>
+            <%= game.genre %>
           </td>
-          <td>Developer: <%= game.developer %>
+          <td>
+            <%= game.developer %>
           </td>
         </tr>
         <% }); %>
