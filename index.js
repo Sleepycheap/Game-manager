@@ -3,6 +3,7 @@ import {join} from 'node:path';
 import { fileURLToPath } from 'node:url';
 import gameRouter from './routes/gameRouter.js';
 import developerRouter from './routes/developerRouter.js';
+import genreRouter from './routes/genreRouter.js';
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const filepath = join(dirname, 'views');
 
@@ -24,3 +25,4 @@ app.listen(port, (err) => {
 
 app.use('/', gameRouter);
 app.use('/developer', developerRouter);
+app.use('/genres', genreRouter);

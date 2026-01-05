@@ -13,13 +13,9 @@
   <h1>
     <%= title %>
   </h1>
-  <form action="/developer/create" method="POST">
-    <label for="name">Name: </label>
+  <form action="/genres/create" method="POST">
+    <label for="name">Genre: </label>
     <input type="text" name="name" id="name" required>
-    <label for="country">Country of Origin: </label>
-    <input type="text" name="country" id="country" required>
-    <label for="year">Year founded: </label>
-    <input type="text" name="year" id="year" required>
     <button type="submit">Submit</button>
   </form>
 </body>

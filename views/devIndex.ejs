@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= title %>
+  </title>
+</head>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% developers.forEach(developer=> { %>
+        <tr>
+          <td>
+            <%= developer.name %>
+          </td>
+          <td>
+            <%= developer.country %>
+          </td>
+          <td>
+            <%= developer.year %>
+          </td>
+        </tr>
+        <% }); %>
+    </tbody>
+  </table>
+</body>
+
+</html>

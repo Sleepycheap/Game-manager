@@ -1,20 +1,20 @@
 import { getDevelopers, addDeveloper } from "../db/queries.js";
 
 export async function getAllDevelopers(req, res) {
-  res.render('index', {
+  res.render('devIndex.ejs', {
     title: 'Developer List',
-    games: await getDevelopers()
+    developers: await getDevelopers()
   })
 };
 
 
 export const developerAddGet = (req, res) => {
   res.render('addDeveloper', {
-    title: 'add a developer',
+    title: 'Add a developer',
   });
 };
 
-export async function developerAddPost(req,res) {
+export async function developerAddPost(req, res) {
   const {name} = req.body;
   const {country} = req.body;
   const {year} = req.body;
