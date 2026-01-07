@@ -6,12 +6,15 @@ import developerRouter from './routes/developerRouter.js';
 import genreRouter from './routes/genreRouter.js';
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const filepath = join(dirname, 'views');
+const assetsPath = join(dirname, 'public');
 
 const app = express();
 
+app.use(express.static(assetsPath));
 app.use(express.urlencoded({ extended: true}));
 app.set('views', filepath);
 app.set('view engine', 'ejs');
+
 
 const port = 8080;
 

@@ -1,0 +1,50 @@
+body {
+  /* display: grid; */
+}
+
+table, th, td {
+  /* border: 1px solid black; */
+  border-collapse: collapse;
+}
+
+
+th {
+  border-bottom: 5px double black;
+}
+
+table {
+  /* width: 50%; */
+  /* border-spacing: 40px; */
+}
+
+tr {
+  border-top: 1px solid black;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+tr:nth-child(even) {
+  background-color: gray;
+  color: white;
+}
+
+#name {
+  /* border: 2px solid black; */
+  display: grid;
+  grid-template-columns: [title] 400px [genre] 400px [developer] 400px [end]; 
+}
+
+#games {
+  /* border: 2px solid blue; */
+  display: grid;
+  grid-template-columns: [title] 2fr [genre] 2fr [developer] 2fr [end];
+  /* margin-top: 10px; */
+  justify-items: center;
+  /* border-right: 2px solid black; */
+}
+
+#gName {
+  /* border-right: 2px solid black; */
+}

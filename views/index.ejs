@@ -7,36 +7,47 @@
   <title>
     <%= title %>
   </title>
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
-  <h1>
+  <h1 class="title">
     <%= title %>
   </h1>
   <table>
     <thead>
-      <tr>
-        <th>Title</th>
-        <th>Genre</th>
-        <th>Developer</th>
+      <tr id="name">
+        <th id="title">Title</th>
+        <th id="genre">Genre</th>
+        <th id="developer">Developer</th>
       </tr>
     </thead>
     <tbody>
       <% games.forEach(game=> { %>
-        <tr>
-          <td>
+        <tr id="games">
+          <td id="gName">
             <%= game.name %>
           </td>
-          <td>
+          <td id="genre">
             <%= game.genre %>
           </td>
-          <td>
+          <td id="developer">
             <%= game.developer %>
           </td>
         </tr>
         <% }); %>
     </tbody>
   </table>
+
+  <div id="links">
+    <div id="tables">
+      <a href="/developer"><button>Developers</button></a>
+      <a href="/genres"><button>Genres</button></a>
+    </div>
+    <div id="createNew">
+
+    </div>
+  </div>
 </body>
 
 </html>
