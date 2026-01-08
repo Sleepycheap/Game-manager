@@ -7,15 +7,28 @@
   <title>
     <%= title %>
   </title>
+  <link rel="stylesheet" href="/css/devIndex.css">
 </head>
 
 <body>
+
   <h1>
     <%= title %>
   </h1>
+
+  <div id="links">
+    <div id="tables">
+      <a href="/"><button id="bLink">Home</button></a>
+      <a href="/genres"><button id="bLink">Genres</button></a>
+    </div>
+    <div id="createNew">
+      <a href="/developer/create"><button class="create">Create New</button></a>
+    </div>
+  </div>
+
   <table>
     <thead>
-      <tr>
+      <tr id="name">
         <th>Name</th>
         <th>Country</th>
         <th>Year</th>
@@ -23,20 +36,32 @@
     </thead>
     <tbody>
       <% developers.forEach(developer=> { %>
-        <tr>
-          <td>
+        <tr id="developers">
+          <td id="dName">
             <%= developer.name %>
           </td>
-          <td>
+          <td id="country">
             <%= developer.country %>
           </td>
-          <td>
+          <td id="year">
             <%= developer.year %>
           </td>
+          <td><button id="edit">Edit</button></td>
+          <td><button id="delete">Delete</button></td>
         </tr>
         <% }); %>
     </tbody>
   </table>
+
+  <!-- <div id="links">
+    <div id="tables">
+      <a href="/"><button>Home</button></a>
+      <a href="/genres"><button>Genres</button></a>
+    </div>
+    <div id="createNew">
+      <a href="/developer/create"><button>Create New</button></a>
+    </div>
+  </div> -->
 </body>
 
 </html>

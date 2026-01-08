@@ -34,6 +34,8 @@
           <td id="developer">
             <%= game.developer %>
           </td>
+          <td><button id="edit">Edit</button></td>
+          <td><button id="delete">Delete</button></td>
         </tr>
         <% }); %>
     </tbody>
@@ -41,13 +43,15 @@
 
   <div id="links">
     <div id="tables">
-      <a href="/developer"><button>Developers</button></a>
-      <a href="/genres"><button>Genres</button></a>
+      <a href="/developer"><button id="bLink">Developers</button></a>
+      <a href="/genres"><button id="bLink">Genres</button></a>
     </div>
     <div id="createNew">
-
+      <a href="/create"><button class="create">Create New</button></a>
     </div>
   </div>
+
+  <script src="/js/ind.js"></script>
 </body>
 
 </html>

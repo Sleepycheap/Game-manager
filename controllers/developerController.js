@@ -2,7 +2,7 @@ import { getDevelopers, addDeveloper } from "../db/queries.js";
 
 export async function getAllDevelopers(req, res) {
   res.render('devIndex.ejs', {
-    title: 'Developer List',
+    title: 'Developers',
     developers: await getDevelopers()
   })
 };
@@ -22,5 +22,5 @@ export async function developerAddPost(req, res) {
   console.log(`body: ${(Object.values(req.body))}`);
   await addDeveloper(name, country, year);
   // console.log(`Game ${gametitle} saved`);
-  res.redirect('/');
+  res.redirect('/developer');
 }

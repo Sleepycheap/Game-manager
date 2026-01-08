@@ -7,18 +7,16 @@ table, th, td {
   border-collapse: collapse;
 }
 
-/* h1 {
-  border-bottom: 2px dashed black;
-  width: 10%;
-} */
+table {
+  width: 400px;
+}
+
+td {
+  text-align: center;
+}
 
 th {
   border-bottom: 5px double black;
-}
-
-table {
-  /* width: 50%; */
-  /* border-spacing: 40px; */
 }
 
 tr {
@@ -35,18 +33,14 @@ tr:nth-child(even) {
 }
 
 #name {
-  /* border: 2px solid black; */
-  display: grid;
-  grid-template-columns: [title] 400px [genre] 400px [developer] 400px [end]; 
+  /* display: grid;
+  grid-template-columns: [title] 1fr [genre];  */
 }
 
-#games {
-  /* border: 2px solid blue; */
-  display: grid;
-  grid-template-columns: [title] 2fr [genre] 2fr [developer] 2fr [end];
-  /* margin-top: 10px; */
-  justify-items: center;
-  /* border-right: 2px solid black; */
+#genres {
+  /* display: grid;
+  grid-template-columns: [title] 1fr [genre];
+  justify-items: center; */
 }
 
 #gName {
@@ -75,8 +69,8 @@ tr:nth-child(even) {
   height: 20px;
   width: 40px;
   position: relative;
-  bottom: 15px;
-  left: 900px;
+  /* bottom: 10px; */
+  left: 40px;
   background-color: #2AA63E;
   color: white;
 }
@@ -90,8 +84,8 @@ tr:nth-child(even) {
   height: 20px;
   width: 50px;
   position: relative;
-  bottom: 15px;
-  left: 550px;
+  /* bottom: 15px; */
+  /* left: 10px; */
   background-color: #9F0712;
   color: white;
 }

@@ -2,7 +2,7 @@ import { getGenres, addGenre } from "../db/queries.js";
 
 export async function getAllGenres(req, res) {
   res.render('genIndex', {
-    title: 'Genre List',
+    title: 'Genres',
     genres: await getGenres()
   })
 };
@@ -20,5 +20,5 @@ export async function genreCreatePost(req,res) {
   console.log(`body: ${(Object.values(req.body))}`);
   await addGenre(name);
   // console.log(`Game ${gametitle} saved`);
-  res.redirect('/');
+  res.redirect('/genres');
 }

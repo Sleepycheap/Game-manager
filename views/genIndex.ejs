@@ -7,24 +7,38 @@
   <title>
     <%= title %>
   </title>
+  <link rel="stylesheet" href="/css/genres.css">
 </head>
 
 <body>
+
+  <div id="links">
+    <div id="tables">
+      <a href="/"><button id="bLink">Home</button></a>
+      <a href="/developer"><button id="bLink">Developers</button></a>
+    </div>
+    <div id="createNew">
+      <a href="/genres/create"><button class="create">Create New</button></a>
+    </div>
+  </div>
+
   <h1>
     <%= title %>
   </h1>
   <table>
     <thead>
-      <tr>
+      <tr id="name">
         <th>Name</th>
       </tr>
     </thead>
     <tbody>
       <% genres.forEach(genre=> { %>
-        <tr>
+        <tr id="genres">
           <td>
             <%= genre.name %>
           </td>
+          <td><button id="edit">Edit</button></td>
+          <td><button id="delete">Delete</button></td>
         </tr>
         <% }); %>
     </tbody>
