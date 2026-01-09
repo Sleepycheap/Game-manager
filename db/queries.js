@@ -26,3 +26,7 @@ export async function getGenres() {
 export async function addGenre(name) {
   await pool.query('INSERT INTO genres (name) VALUES ($1)', [name]);
 };
+
+export async function updateGame(genre, name) {
+  await pool.query('UPDATE games SET (genre) = ROW($1) WHERE (name) = ($2)', [genre, name]);
+}

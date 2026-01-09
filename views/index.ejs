@@ -25,8 +25,9 @@
     <tbody>
       <% games.forEach(game=> { %>
         <tr id="games">
-          <td id="gName">
-            <%= game.name %>
+          <td id="gName"><button class="title">
+              <%= game.name %>
+            </button>
           </td>
           <td id="genre">
             <%= game.genre %>
@@ -50,8 +51,8 @@
       <a href="/create"><button class="create">Create New</button></a>
     </div>
   </div>
-
-  <script src="/js/ind.js"></script>
+  <script type="module" src="/js/ind.js"></script>
+  <!-- <script type="module" src="../db/queries.js"></script> -->
 </body>
 
 </html>
