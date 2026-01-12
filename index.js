@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url';
 import gameRouter from './routes/gameRouter.js';
 import developerRouter from './routes/developerRouter.js';
 import genreRouter from './routes/genreRouter.js';
+import updateRouter from './routes/updateRouter.js';
+import { addAbortListener } from 'node:events';
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const filepath = join(dirname, 'views');
 const assetsPath = join(dirname, 'public');
@@ -31,3 +33,4 @@ app.listen(port, (err) => {
 app.use('/', gameRouter);
 app.use('/developer', developerRouter);
 app.use('/genres', genreRouter);
+app.use('/update', updateRouter);

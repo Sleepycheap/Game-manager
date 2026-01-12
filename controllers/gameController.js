@@ -1,9 +1,15 @@
 import { getGames, insertGameTitle, updateGame } from "../db/queries.js";
 
+function getName(name) {
+  console.log(`name: ${name}`);
+}
+
+
 export async function getAllGames(req, res) {
   res.render('index', {
     title: 'Game List',
-    games: await getGames()
+    games: await getGames(),
+    getName: getName,
   })
 };
 
@@ -28,6 +34,7 @@ export async function gameCreatePost(req,res) {
 export async function gameUpdateGet(req, res) {
   res.render('updateGame', {
     title: 'Update Game',
+    games: await getGames()
   });
 };
 

@@ -1,21 +1,22 @@
-import { updateGame } from "/Game-Manager/db/queries.js";
 
-const edit = document.querySelectorAll('#edit');
-const names = document.querySelectorAll('#gName');
-const name = document.querySelector('#gName');
 
-const titles = document.querySelectorAll('.title');
+// const edit = document.querySelectorAll('button#edit');
+// const names = document.querySelectorAll('#gName');
+// const name = document.querySelector('#gName');
 
-for (const i of titles) {
-  i.addEventListener('click', () => {
-    console.log(i.textContent);
-  })
+// const titles = document.querySelectorAll('.g-title');
+
+export async function getName(name) {
+  return name;
 }
 
-const update = () => {
-  
-}
+// for (const i of edit) {
+//   i.addEventListener('click', () => {
+//     console.log(edit.id);
+//   })
+// }
 
-const getName = () => {
-  
-}
+// const update = async (req, res) => {
+//   res.redirect('/update');
+// }
+

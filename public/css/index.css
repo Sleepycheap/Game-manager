@@ -71,7 +71,7 @@ tr:nth-child(even) {
   width: 205px;
 }
 
-#edit {
+.edit {
   height: 20px;
   width: 40px;
   position: relative;
@@ -81,7 +81,7 @@ tr:nth-child(even) {
   color: white;
 }
 
-#edit:hover {
+.edit:hover {
   width: 42px;
   box-shadow: 3px 3px darkgreen;
 }
