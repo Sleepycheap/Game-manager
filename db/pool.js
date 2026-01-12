@@ -3,7 +3,7 @@ import 'dotenv';
 
 export const pool = new Pool({
   host: 'localhost',
-  user: 'anthony',
+  user: 'anthonyauthier',
   database: 'games_list',
   password: '082015',
   port: '5432'

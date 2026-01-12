@@ -5,7 +5,6 @@ import gameRouter from './routes/gameRouter.js';
 import developerRouter from './routes/developerRouter.js';
 import genreRouter from './routes/genreRouter.js';
 import updateRouter from './routes/updateRouter.js';
-import { addAbortListener } from 'node:events';
 const dirname = fileURLToPath(new URL('.', import.meta.url));
 const filepath = join(dirname, 'views');
 const assetsPath = join(dirname, 'public');
@@ -28,6 +27,7 @@ app.listen(port, (err) => {
   }
   console.log(`Express running on port: ${port}`);
 });
+
 
 
 app.use('/', gameRouter);

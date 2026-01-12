@@ -6,9 +6,16 @@
 
 // const titles = document.querySelectorAll('.g-title');
 
-export async function getName(name) {
-  return name;
+function test() {
+  console.log('test');
 }
+
+function getName(name) {
+  const gamename = name;
+  console.log(`Name of game is: ${gamename}`);
+  
+}
+
 
 // for (const i of edit) {
 //   i.addEventListener('click', () => {

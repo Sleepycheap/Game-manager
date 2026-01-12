@@ -1,15 +1,17 @@
 import { getGames, insertGameTitle, updateGame } from "../db/queries.js";
+// import { getName } from "../public/js/ind.js";
 
-function getName(name) {
-  console.log(`name: ${name}`);
-}
+// function getName(name) {
+//   console.log(`name: ${name}`);
+// }
+
+
 
 
 export async function getAllGames(req, res) {
   res.render('index', {
     title: 'Game List',
     games: await getGames(),
-    getName: getName,
   })
 };
 

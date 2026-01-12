@@ -36,10 +36,9 @@
             <%= game.developer %>
           </td>
 
-          <% const gamename = game.name %>
-
-          <td><a href="/update/<%=gamename%>"><button id="<%=game.name%>" class="edit" ">Edit</button></a></td>
-          <td><button id="delete">Delete</button></td>
+          <% const gamename=game.name %>
+            <td><a><button id="<%=game.name%>" class="edit" onclick="getName()">Edit</button></a></td>
+            <td><button class=" delete">Delete</button></td>
         </tr>
         <% }); %>
     </tbody>
@@ -54,7 +53,15 @@
       <a href="/create"><button class="create">Create New</button></a>
     </div>
   </div>
-  <!-- <script type="module" src="/js/ind.js"></script> -->
+  <script>
+    const buttons = document.querySelectorAll('button.edit');
+    for (const i of buttons) {
+      i.addEventListener('click', () => {
+        const gamename = i.id;
+      })
+    }
+  </script>
+  <script type="module" src="/js/ind.js"></script>
   <!-- <script type="module" src="../db/queries.js"></script> -->
 </body>
 
