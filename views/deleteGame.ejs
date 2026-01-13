@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <% title %>
+  </title>
+</head>
+
+<body>
+  <h1>
+    Deleting <%= game %>
+  </h1>
+</body>
+<h2>Are you sure you want to delete <%= game %>?</h2>
+<form action="/delete?name=<%=game%>" method="POST">
+  <label for="yes">Yes</label>
+  <input type="radio" id="confirm" name="choice" value="yes">
+  <label for="no">No</label>
+  <input type="radio" id="deny" name="choice" value="no">
+  <button type="submit">Delete</button>
+</form>
+
+</html>

@@ -6,17 +6,26 @@ function getName(name) {
 
 
 export async function updateGameGet(req, res) {
-  console.log('test');
-  // console.log(`params: ${Object.entries(req)}`);
+  const name = Object.values(req.query)
   res.render('updateGame', {
     title: 'Update Game',
-    game: 'Metroid',
+    game: name,
   })
 };
 
 export async function updateGamePost(req, res) {
-  console.log(`Body: ${Object.entries(req.body)}, Query: ${Object.entries(req)}`);
-  await updateGame(req.body, req.query);
+  const {genre} = req.body;
+  const {developer} = req.body;
+  const {name} = req.query;
+  const data = req.body;
+  // console.log(`data: ${data.genre}, ${data.developer}, name: ${name}`);
+
+  try {
+    await updateGame(data, name);
+    console.log('update suceeded');
+  } catch (err) {
+    console.log(err);
+  }
 
   res.redirect('/');
 }

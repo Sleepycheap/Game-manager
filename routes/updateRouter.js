@@ -4,8 +4,8 @@ import {updateGameGet, updateGamePost} from '../controllers/updateController.js'
 
 const updateRouter = express.Router();
 
-updateRouter.get('/:gamename', updateGameGet);
-updateRouter.post('/:gamename', updateGamePost);
+updateRouter.get('/', updateGameGet);
+updateRouter.post('/', updateGamePost);
 // updateRouter.post('')
 
 export default updateRouter;

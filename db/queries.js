@@ -31,3 +31,7 @@ export async function updateGame(game, name) {
   // await pool.query('UPDATE games SET (genre) = ROW($1) WHERE (name) = ($2)', [genre, name]);
   await pool.query('UPDATE games SET genre = $1, developer = $2 WHERE name = $3', [game.genre, game.developer, name])
 }
+
+export async function deleteGame(name) {
+  await pool.query('DELETE FROM games WHERE name = $1', [name])
+}

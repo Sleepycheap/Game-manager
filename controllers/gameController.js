@@ -1,11 +1,16 @@
 import { getGames, insertGameTitle, updateGame } from "../db/queries.js";
-// import { getName } from "../public/js/ind.js";
+import { test, getName } from '../public/js/helper.js';
 
 // function getName(name) {
 //   console.log(`name: ${name}`);
 // }
 
+const testName = getName();
 
+export async function URLTest(req, res) {
+  console.log(`TEST REQ: ${Object.values(req.query)}`);
+  console.log(`TEST RES: ${Object.keys(res)}`);
+} 
 
 
 export async function getAllGames(req, res) {

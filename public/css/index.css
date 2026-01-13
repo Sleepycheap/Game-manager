@@ -72,13 +72,16 @@ tr:nth-child(even) {
 }
 
 .edit {
+  display: grid;
+  text-align: center;
+  border: 2px solid black;
   height: 20px;
   width: 40px;
   position: relative;
   bottom: 15px;
   left: 900px;
   background-color: #2AA63E;
-  color: white;
+  color: purple;
 }
 
 .edit:hover {
@@ -113,3 +116,4 @@ tr:nth-child(even) {
   width: 103px;
   box-shadow: 3px 3px lightblue;
 }
+

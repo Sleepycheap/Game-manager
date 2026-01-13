@@ -6,11 +6,12 @@
 
 // const titles = document.querySelectorAll('.g-title');
 
-function test() {
-  console.log('test');
+export function test() {
+  const time = new Date();
+  console.log(`This is a test at ${time}`);
 }
 
-function getName(name) {
+export function getName(name) {
   const gamename = name;
   console.log(`Name of game is: ${gamename}`);
   
