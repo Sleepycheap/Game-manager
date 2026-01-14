@@ -17,9 +17,21 @@
     <label for="name">Game Title: </label>
     <input type="text" name="name" id="name" required>
     <label for="genre">Genre: </label>
-    <input type="text" name="genre" id="genre" required>
+    <select name="genre" id="genre">
+      <% genres.forEach(genre=> { %>
+        <option value="<%= genre.name %>">
+          <%= genre.name %>
+        </option>
+        <% }); %>
+    </select>
     <label for="developer">Developer: </label>
-    <input type="text" name="developer" id="developer" required>
+    <select name="developer" id="developer">
+      <% developers.forEach(developer=> { %>
+        <option value="<%= developer.name %>">
+          <%= developer.name %>
+        </option>
+        <% }); %>
+    </select>
     <button type="submit">Submit</button>
   </form>
 </body>

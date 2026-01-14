@@ -1,4 +1,5 @@
-import { getGames, updateGame} from "../db/queries.js";
+import { getGames, updateGame, getDevelopers, getGenres} from "../db/queries.js";
+import {renderError} from "./errorController.js";
 
 function getName(name) {
   return name;
@@ -10,6 +11,8 @@ export async function updateGameGet(req, res) {
   res.render('updateGame', {
     title: 'Update Game',
     game: name,
+    genres: await getGenres(),
+    developers: await getDevelopers()
   })
 };
 
@@ -23,9 +26,10 @@ export async function updateGamePost(req, res) {
   try {
     await updateGame(data, name);
     console.log('update suceeded');
+    res.redirect('/');
   } catch (err) {
     console.log(err);
+    await renderError(req, res, err);
   }
-
-  res.redirect('/');
+  
 }

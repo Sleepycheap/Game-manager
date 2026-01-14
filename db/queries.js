@@ -35,3 +35,4 @@ export async function updateGame(game, name) {
 export async function deleteGame(name) {
   await pool.query('DELETE FROM games WHERE name = $1', [name])
 }
+
